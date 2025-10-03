@@ -1,0 +1,30 @@
+  body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f7fa;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    input, button, select {
+      padding: 8px;
+      margin: 5px 0;
+      width: 100%;
+    }
+    .section {
+      background: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .output {
+      margin-top: 10px;
+      background: #ecf0f1;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .error {
+      color: red;
+    }
+  
