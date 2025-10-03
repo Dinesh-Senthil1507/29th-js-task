@@ -1,17 +1,15 @@
 let student = {};
 
     function processInfo() {
-      const name = document.getElementById('name').value.trim();
+      const name = document.getElementById('name').value;
       const birthYear = Number(document.getElementById('birthYear').value);
-      const city = document.getElementById('city').value.trim();
+      const city = document.getElementById('city').value;
       const currentYear = new Date().getFullYear();
       const errorDiv = document.getElementById('infoError');
       const outputDiv = document.getElementById('infoOutput');
-      errorDiv.innerText = '';
-      outputDiv.innerText = '';
-
+   
       if (!name || !birthYear || !city || birthYear > currentYear ) {
-        errorDiv.innerText = "Please fill all fields correctly.";
+        errorDiv.innerText = "Please fill all details correctly.";
         return;
       }
 
@@ -27,7 +25,7 @@ let student = {};
       const hour = new Date().getHours();
       let greeting;
       if (hour < 12) greeting = "Good Morning ";
-      else if (hour < 18) greeting = "Good Afternoon ";
+      else if (hour < 15) greeting = "Good Afternoon ";
       else greeting = "Good Evening ";
 
       document.getElementById('greeting').innerText = `${greeting}, ${student.name || "Student"}!`;
@@ -48,13 +46,13 @@ let student = {};
       }
 
       let result;
-      switch (op) {
+      switch (op)   {
         case 'add': result = num1 + num2; break;
         case 'subtract': result = num1 - num2; break;
         case 'multiply': result = num1 * num2; break;
         case 'divide':
           if (num2 === 0) {
-            errorDiv.innerText = "Cannot divide by zero.";
+            errorDiv.innerText = "infinity";
             return;
           }
           result = num1 / num2;
@@ -75,7 +73,7 @@ let student = {};
         "You are capable of amazing things.",
         "Push yourself, because no one else is going to do it for you."
       ];
-      const randomIndex = Math.floor(Math.random() * quotes.length);
+      const randomIndex = Math.floor(Math.random()*quotes.length);
       document.getElementById('quoteOutput').innerText = quotes[randomIndex];
     }
 
